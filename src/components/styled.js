@@ -34,3 +34,47 @@ export const SearchCard = styled.div`
     margin: 0;
   }
 `;
+
+export const Star = styled.div`
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #ffc806;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+`;
+
+export const ShowPageWrapper = styled.div`
+  padding: 0 20px;
+
+  @media only screen and (min-width: 516px) {
+    padding: 0 40px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 60px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding: 0 80px;
+  }
+`;
+
+export const InfoBlock = styled.div`
+  margin-bottom: 40px;
+  h2 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+`;
