@@ -1,17 +1,18 @@
 import {useReducer,useEffect} from 'react'
-function usePersistedReducer(reducer, initialState, key){
 
-    function showsReducer (prevState,action){
-        switch(action.type){
-        case 'ADD':{
-            return [...prevState,action.showId]
-        }
-        case 'REMOVE':{
-            return prevState.filter( (showId) => showId!==action.showId );
-        }
-        default:return prevState;
+function showsReducer (prevState,action){
+    switch(action.type){
+    case 'ADD':{
+        return [...prevState,action.showId]
     }
+    case 'REMOVE':{
+        return prevState.filter( (showId) => showId!==action.showId );
     }
+    default:return prevState;
+}
+}
+
+function usePersistedReducer(reducer, initialState, key){
 
     /* third arg takes second arg and computes and use it as the initial state */
     const [state,dispatch]= useReducer(reducer,initialState,(initial)=>{
